@@ -1,4 +1,4 @@
-function findNaughtyStep(original: String, modified: String): String {
+function findNaughtyStep(original: string, modified: string): string {
   const [shorter, longer] = [original, modified].sort(
     (a, b) => a.length - b.length
   )

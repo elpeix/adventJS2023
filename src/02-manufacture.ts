@@ -1,4 +1,4 @@
-function manufacture(gifts: String[], materials: String): String[] {
+function manufacture(gifts: string[], materials: string): string[] {
   return gifts.filter((gift) =>
     gift.split('').every((c) => materials.includes(c))
   )
