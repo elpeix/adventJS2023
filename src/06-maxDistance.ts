@@ -18,4 +18,14 @@ function maxDistance(movements: string): number {
   return Math.max(toRight, toLeft)
 }
 
+// Regex solution
+// function maxDistance(movements: string): number {
+//   const countRight = (movements.match(/>/g) || []).length
+//   const countLeft = (movements.match(/</g) || []).length
+//   const countBoth = (movements.match(/\*/g) || []).length
+//   const toRight = Math.abs(countRight + countBoth - countLeft)
+//   const toLeft = Math.abs(countLeft + countBoth - countRight)
+//   return Math.max(toRight, toLeft)
+// }
+
 export default maxDistance
