@@ -32,9 +32,11 @@ describe('checkIsValidCopy', () => {
     ).toBe(true)
     expect(checkIsValidCopy('Santa Claus', '###:. c:+##')).toBe(true)
     expect(checkIsValidCopy('Santa Claus', 's#+:. c:. s')).toBe(true)
+    expect(checkIsValidCopy('S#n:a Claus', 'S#+:. c:. s')).toBe(true)
     expect(checkIsValidCopy('3 regalos', '3 .+:# #:')).toBe(true)
     expect(checkIsValidCopy('3 regalos', '3        ')).toBe(true)
     expect(checkIsValidCopy('3 regalos 3', '3 .+:# #: 3')).toBe(true)
+    expect(checkIsValidCopy('3 #egalos', '3 .+:# #:')).toBe(true)
   })
 
   it('should return false when copy is invalid', () => {
@@ -51,5 +53,6 @@ describe('checkIsValidCopy', () => {
         'Santa Claus viene a buscarte para darte muchos regalos y eso es espectacular porque da mucha felicidad a todos los niño'
       )
     ).toBe(false)
+    expect(checkIsValidCopy('s+#:.#c:. s', 's#+:.#c:. s')).toBe(false)
   })
 })
