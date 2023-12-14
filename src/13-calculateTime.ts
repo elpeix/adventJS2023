@@ -12,9 +12,9 @@ function calculateTime(deliveries: string[]): string {
   } else {
     substraction = sumResult - seven
   }
-  const hours = Math.floor(substraction / 3600)
-  const minutes = Math.floor((substraction % 3600) / 60)
-  const seconds = Math.floor((substraction % 3600) % 60)
+  const hours = ~~(substraction / 3600)
+  const minutes = ~~((substraction % 3600) / 60)
+  const seconds = ~~((substraction % 3600) % 60)
 
   const formattedHours = hours.toString().padStart(2, '0')
   const formattedMinutes = minutes.toString().padStart(2, '0')
