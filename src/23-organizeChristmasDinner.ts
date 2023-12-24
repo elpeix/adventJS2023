@@ -1,4 +1,4 @@
-function organizeChristmasDinner(dishes: string[][]) {
+function organizeChristmasDinner(dishes: string[][]): string[][] {
   const ingredientsMap = new Map<string, string[]>()
   for (const dish of dishes) {
     const [dishName, ...ingredients] = dish
